@@ -1,0 +1,19 @@
+{
+    "image": "ipfs://bafybeiavqerooyykeue6cn45wuwbgcphigfu5sxohufmhhqylmtogrfjuq/15.png",
+    "tokenId": 15,
+    "name": "MyProject #15",
+    "attributes": [
+        {
+            "trait_type": "background",
+            "value": "landscape"
+        },
+        {
+            "trait_type": "shape",
+            "value": "red_circle"
+        },
+        {
+            "trait_type": "text",
+            "value": "greek"
+        }
+    ]
+}

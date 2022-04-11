@@ -1,0 +1,18 @@
+{
+    "background": {
+        "green": 4,
+        "landscape": 6,
+        "purple": 2,
+        "red": 5
+    },
+    "shape": {
+        "blue-circle": 7,
+        "red_circle": 7,
+        "striped_triangle": 3
+    },
+    "text": {
+        "greek": 6,
+        "hello_world": 4,
+        "testing": 7
+    }
+}

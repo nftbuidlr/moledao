@@ -1,0 +1,19 @@
+{
+    "image": "ipfs://bafybeiavqerooyykeue6cn45wuwbgcphigfu5sxohufmhhqylmtogrfjuq/4.png",
+    "tokenId": 4,
+    "name": "MyProject #4",
+    "attributes": [
+        {
+            "trait_type": "background",
+            "value": "purple"
+        },
+        {
+            "trait_type": "shape",
+            "value": "blue-circle"
+        },
+        {
+            "trait_type": "text",
+            "value": "testing"
+        }
+    ]
+}

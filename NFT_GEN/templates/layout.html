@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Layout
+    <br>
+    <form method="post" action="{% url 'layoutP' %}">
+        {% csrf_token %}
+        <input type="text" name="layoutVariable" required>
+        <input type="submit" value="+">
+    </form>
+    <br>
+
+    {% for i in layoutDataV %}
+
+
+    <form method="post" enctype="multipart/form-data" action="{% url 'uploadImage' i.id %}">
+        {% csrf_token %}
+        {{i.layer_name}}
+        <input required name="allimages" type="file" multiple>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% endfor %}
+
+
+    {% for i in imagesObjects %}
+    {{i.layer}}<br>
+    <img src="/images/{{i.image}}" alt="Cool">
+    <form method="post"  action="{% url 'setrarity' i.id %}">
+        {% csrf_token %}
+        <p>Set rarity:<input type="text " name="rarity"></input></p>
+        <button type="submit">Update</button>
+    </form>
+    {% endfor %}
+    
+
+    <h3 class="text-center alert alert-info">Project Details</h3>
+    <form method="post" action="{% url 'add_proj' %}">
+        {% csrf_token %}
+        <p>Name: <input type="text " name="projname" value={{proj}} required></input></p>
+        <p>Total (In range of 1 and {{max}} ): <input type="text " name="total" value={{total}} required></input></p>
+        <button type="submit">Save</button>
+    </form>
+
+<br>
+
+<form method="post"  action="{% url 'GenerateImg' %}">
+    {% csrf_token %}
+    <button type="submit">Generate</button>
+</form>
+
+<br>
+
+<form method="post"  action="{% url 'download' %}">
+    {% csrf_token %}
+    <button type="submit">Download</button>
+</form>
+
+<br>
+
+<form method="post"  action="{% url 'uploadnft' %}">
+    {% csrf_token %}
+    <button type="submit">Upload to Pinata</button>
+</form>
+
+</html>

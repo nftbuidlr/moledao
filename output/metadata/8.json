@@ -1,0 +1,19 @@
+{
+    "image": "ipfs://bafybeiavqerooyykeue6cn45wuwbgcphigfu5sxohufmhhqylmtogrfjuq/8.png",
+    "tokenId": 8,
+    "name": "MyProject #8",
+    "attributes": [
+        {
+            "trait_type": "background",
+            "value": "landscape"
+        },
+        {
+            "trait_type": "shape",
+            "value": "striped_triangle"
+        },
+        {
+            "trait_type": "text",
+            "value": "testing"
+        }
+    ]
+}
